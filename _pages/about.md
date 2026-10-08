@@ -5,10 +5,10 @@ permalink: /
 subtitle: Ph.D. student at <a href='https://www.kaist.ac.kr/en/'>KAIST</a>
 
 # To show a profile photo: add it as assets/img/prof_pic.jpg, then uncomment the four lines below.
-# profile:
-#   align: right
-#   image: prof_pic.jpg
-#   image_circular: false # crops the image to make it circular
+profile:
+  align: right
+  image: prof_pic.jpg
+  image_circular: false # crops the image to make it circular
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
