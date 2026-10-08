@@ -1,0 +1,24 @@
+---
+layout: none
+permalink: /cv/
+title: CV
+nav: true
+nav_order: 2
+sitemap: false
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CV | Wonjoong Kim</title>
+    <meta name="robots" content="noindex" />
+    <meta http-equiv="refresh" content="0; url={{ '/assets/pdf/CV.pdf' | relative_url }}" />
+    <script>
+      window.location.replace("{{ '/assets/pdf/CV.pdf' | relative_url }}");
+    </script>
+  </head>
+  <body>
+    <a href="{{ '/assets/pdf/CV.pdf' | relative_url }}">CV (PDF)</a>
+  </body>
+</html>

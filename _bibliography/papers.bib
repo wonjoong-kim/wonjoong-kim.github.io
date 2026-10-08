@@ -1,115 +1,242 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
+% The publications page shows entries in the order they appear in this file.
+% Sections are picked by entry type and the custom "category" field:
+%   Preprints   : unpublished
+%   Conferences : inproceedings with category = Conference
+%   Journals    : article
+%   Workshops   : inproceedings with category = Workshop
+% Mark equal contribution with a star after the last name, as in "Kim*, Wonjoong".
+% Do not type the at-sign inside these comment lines. The parser reads it as a new entry.
 
-@book{einstein1920relativity,
-  title     = {Relativity: the Special and General Theory},
-  author    = {Einstein, Albert},
-  year      = {1920},
-  publisher = {Methuen & Co Ltd},
-  html      = {relativity.html}
+% ----------------------------------------------------------------------------
+% Preprints
+% ----------------------------------------------------------------------------
+
+@unpublished{park2026maniphysicsbench,
+  abbr   = {Preprint},
+  title  = {ManiPhysicsBench: Physics-Based Assessment of Object Preservation in VLA Manipulation},
+  author = {Park, Sangwu and In, Yeonjun and Kim, Wonjoong and Kim, Sungwon and Kim, Sein and Park, Chanyoung},
+  note   = {Under Review}
 }
 
-@book{einstein1956investigations,
-  bibtex_show = {true},
-  title       = {Investigations on the Theory of the Brownian Movement},
-  author      = {Einstein, Albert},
-  year        = {1956},
-  publisher   = {Courier Corporation},
-  preview     = {brownian-motion.gif}
+@unpublished{park2026activesaddler,
+  abbr   = {Preprint},
+  title  = {ActiveSaddler: Automated Curriculum Learning for Agent Harness Optimization},
+  author = {Park, Sungho and Kim, Wonjoong and Zhang, Jue and Han, Wook-Shin and Gao, Pengfei and Park, Chanyoung and Yao, Yongqiang and Fu, Rao and Nallipogu, Elsie and Lin, Qingwei and Rühle, Victor},
+  note   = {Under Review}
 }
 
-@article{einstein1950meaning,
-  abbr        = {AJP},
-  bibtex_show = {true},
-  title       = {The meaning of relativity},
-  author      = {Einstein, Albert and Taub, AH},
-  journal     = {American Journal of Physics},
-  volume      = {18},
-  number      = {6},
-  pages       = {403--404},
-  year        = {1950},
-  publisher   = {American Association of Physics Teachers}
+@unpublished{in2026failureattribution,
+  abbr   = {Preprint},
+  title  = {Rethinking Failure Attribution in Multi-Agent Systems: A Multi-Perspective Benchmark and Evaluation},
+  author = {In, Yeonjun and Tanjim, Mehrab and Subramanian, Jayakumar and Kim, Sungchul and Bhattacharya, Uttaran and Kim, Wonjoong and Park, Sangwu and Sarkhel, Somdeb and Park, Chanyoung},
+  note   = {Under Review}
 }
 
-@article{PhysRev.47.777,
-  abbr              = {PhysRev},
-  title             = {Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author            = {Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract          = {In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal           = {Phys. Rev.},
-  location          = {New Jersey},
-  volume            = {47},
-  issue             = {10},
-  pages             = {777--780},
-  numpages          = {0},
-  year              = {1935},
-  month             = {May},
-  publisher         = aps,
-  doi               = {10.1103/PhysRev.47.777},
-  url               = {https://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html              = {https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf               = {example_pdf.pdf},
-  altmetric         = {248277},
-  dimensions        = {true},
-  google_scholar_id = {qyhmnyLat1gC},
-  video             = {https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info   = {. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation        = {* Example use of superscripts<br>† Albert Einstein},
-  selected          = {true},
-  inspirehep_id     = {3255}
+% ----------------------------------------------------------------------------
+% Conferences
+% ----------------------------------------------------------------------------
+
+@inproceedings{park2026autosaddler,
+  abbr      = {NeurIPS},
+  category  = {Conference},
+  title     = {AutoSaddler: Automatic Harness Optimization with Durable Updates from Agent Execution Traces},
+  author    = {Park, Sungho and Kim, Wonjoong and Tan, Rongyuan and Zhang, Jue and Han, Wook-Shin and Gao, Pengfei and Park, Chanyoung and Yao, Yongqiang and Fu, Rao and Nallipogu, Elsie and Lin, Qingwei and Rajmohan, Saravan and Zhang, Dongmei},
+  booktitle = {Annual Conference on Neural Information Processing Systems (NeurIPS)},
+  year      = {2026}
 }
 
-@article{einstein1905molekularkinetischen,
-  title     = {{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author    = {Einstein, A.},
-  journal   = {Annalen der physik},
-  volume    = {322},
-  number    = {8},
-  pages     = {549--560},
-  year      = {1905},
-  publisher = {Wiley Online Library}
+@inproceedings{kim2026pair,
+  abbr      = {NeurIPS},
+  category  = {Conference},
+  title     = {PAIR: Prefix-Aware Internal Reward Model for Multi-Turn Agent Optimization},
+  author    = {Kim, Wonjoong and In, Yeonjun and Park, Sangwu and Lee, Dongha and Park, Chanyoung},
+  booktitle = {Annual Conference on Neural Information Processing Systems (NeurIPS)},
+  year      = {2026}
 }
 
-@article{einstein1905movement,
-  abbr    = {Ann. Phys.},
-  title   = {Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author  = {Einstein, A.},
-  journal = {Ann. Phys.},
-  volume  = {17},
-  pages   = {549--560},
-  year    = {1905}
+@inproceedings{in2026personalize,
+  abbr      = {NeurIPS},
+  category  = {Conference},
+  title     = {Personalize-then-Store: Benchmarking and Learning Personalized Memory for Long-horizon Agents},
+  author    = {In, Yeonjun and Kim, Wonjoong and Park, Sangwu and Yoon, Kanghoon and Park, Chanyoung},
+  booktitle = {Annual Conference on Neural Information Processing Systems (NeurIPS)},
+  year      = {2026}
 }
 
-@article{einstein1905electrodynamics,
-  title  = {On the electrodynamics of moving bodies},
-  author = {Einstein, A.},
-  year   = {1905}
+@inproceedings{kim2026selfevolverec,
+  abbr      = {NeurIPS},
+  category  = {Conference},
+  title     = {Self-EvolveRec: Self-Evolving Recommender Systems with LLM-based Directional Feedback},
+  author    = {Kim, Sein and Park, Sangwu and Kang, Hongseok and Kim, Wonjoong and Seo, Jimin and In, Yeonjun and Yoon, Kanghoon and Park, Chanyoung},
+  booktitle = {Annual Conference on Neural Information Processing Systems (NeurIPS)},
+  year      = {2026}
 }
 
-@article{einstein1905photoelectriceffect,
-  bibtex_show = {true},
-  abbr        = {Ann. Phys.},
-  title       = {{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}},
-  author      = {Albert Einstein},
-  abstract    = {This is the abstract text.},
-  journal     = {Ann. Phys.},
-  volume      = {322},
-  number      = {6},
-  pages       = {132--148},
-  year        = {1905},
-  doi         = {10.1002/andp.19053220607},
-  award       = {Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name  = {Nobel Prize}
+@inproceedings{kim2026visualtokenpruning,
+  abbr      = {ECCV},
+  category  = {Conference},
+  title     = {Why and When Visual Token Pruning Fails? A Study on Relevant Visual Information Shift in MLLMs Decoding},
+  author    = {Kim, Jiwan and Kim, Kibum and Kim, Wonjoong and Lee, Byung-Kwan and Park, Chanyoung},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year      = {2026}
 }
 
-@book{przibram1967letters,
-  bibtex_show = {true},
-  title       = {Letters on wave mechanics},
-  author      = {Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year        = {1967},
-  publisher   = {Vision},
-  preview     = {wave-mechanics.gif},
-  abbr        = {Vision}
+@inproceedings{kim2026beyondfinalanswer,
+  abbr      = {ICML},
+  category  = {Conference},
+  title     = {Beyond the Final Answer: Evaluating the Reasoning Trajectories of Tool-Augmented Agents},
+  author    = {Kim, Wonjoong and Park, Sangwu and In, Yeonjun and Kim, Sein and Lee, Dongha and Park, Chanyoung},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2026}
+}
+
+@inproceedings{in2026reasoningstructure,
+  abbr      = {ACL},
+  category  = {Conference},
+  title     = {Reasoning Structure Matters for Safety Alignment of Reasoning Models},
+  author    = {In, Yeonjun and Kim, Wonjoong and Park, Sangwu and Park, Chanyoung},
+  booktitle = {Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year      = {2026}
+}
+
+@inproceedings{in2025safetystandard,
+  abbr      = {EMNLP Findings},
+  category  = {Conference},
+  title     = {Is Safety Standard Same for Everyone? User-Specific Safety Evaluation of Large Language Models},
+  author    = {In, Yeonjun and Kim, Wonjoong and Yoon, Kanghoon and Kim, Sungchul and Tanjim, Mehrab and Park, Sangwu and Kim, Kibum and Park, Chanyoung},
+  booktitle = {Findings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  year      = {2025}
+}
+
+@inproceedings{choi2025dynamic,
+  abbr      = {SIGIR},
+  category  = {Conference},
+  title     = {Dynamic Time-aware Continual User Representation Learning},
+  author    = {Choi, Seungyoon and Kim, Sein and Kang, Hongseok and Kim, Wonjoong and Park, Chanyoung},
+  booktitle = {ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)},
+  year      = {2025}
+}
+
+@inproceedings{kim2025simplot,
+  abbr      = {NAACL Findings},
+  category  = {Conference},
+  title     = {SIMPLOT: Enhancing Chart Question Answering by Distilling Essentials},
+  author    = {Kim*, Wonjoong and Park*, Sangwu and In, Yeonjun and Han, Seokwon and Park, Chanyoung},
+  booktitle = {Findings of the Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics (NAACL)},
+  year      = {2025}
+}
+
+@inproceedings{choi2024dslr,
+  abbr      = {WWW},
+  category  = {Conference},
+  title     = {DSLR: Diversity Enhancement and Structure Learning for Rehearsal-based Graph Continual Learning},
+  author    = {Choi*, Seungyoon and Kim*, Wonjoong and Kim, Sungwon and In, Yeonjun and Kim, Sein and Park, Chanyoung},
+  booktitle = {The Web Conference (WWW)},
+  year      = {2024},
+  note      = {Oral Presentation}
+}
+
+@inproceedings{kim2023taskequivariant,
+  abbr      = {KDD},
+  category  = {Conference},
+  title     = {Task-Equivariant Graph Few-shot Learning},
+  author    = {Kim, Sungwon and Lee, Junseok and Lee, Namkyeong and Kim, Wonjoong and Choi, Seungyoon and Park, Chanyoung},
+  booktitle = {ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)},
+  year      = {2023}
+}
+
+@inproceedings{jo2021timeseries,
+  abbr      = {ICONIP},
+  category  = {Conference},
+  title     = {An improved time-series forecasting model using time series decomposition and gru architecture},
+  author    = {Jo*, Hyunjae and Kim*, Wonjoong and Goh*, Hyokyung and Jun, Chihyuck},
+  booktitle = {International Conference on Neural Information Processing (ICONIP)},
+  year      = {2021}
+}
+
+% ----------------------------------------------------------------------------
+% Journals
+% ----------------------------------------------------------------------------
+
+@article{kim2020cds,
+  abbr    = {Complexity},
+  title   = {Forecasting CDS term structure based on nelson–siegel model and machine learning},
+  author  = {Kim, Wonjoong and Jung, Gunho and Choi, Sunyong},
+  journal = {Complexity},
+  year    = {2020},
+  note    = {SCIE}
+}
+
+% ----------------------------------------------------------------------------
+% Workshops
+% ----------------------------------------------------------------------------
+
+@inproceedings{kim2026beyondfinalanswer_ws,
+  abbr      = {KDD},
+  category  = {Workshop},
+  title     = {Beyond the Final Answer: Evaluating the Reasoning Trajectories of Tool-Augmented Agents},
+  author    = {Kim, Wonjoong and Park, Sangwu and In, Yeonjun and Kim, Sein and Lee, Dongha and Park, Chanyoung},
+  booktitle = {KDD Workshop on Evaluation and Trustworthiness of Agentic AI},
+  year      = {2026}
+}
+
+@inproceedings{kim2026visualtokenpruning_ws,
+  abbr      = {KDD},
+  category  = {Workshop},
+  title     = {Why and When Visual Token Pruning Fails? A Study on Relevant Visual Information Shift in MLLMs Decoding},
+  author    = {Kim, Jiwan and Kim, Kibum and Kim, Wonjoong and Lee, Byung-Kwan and Park, Chanyoung},
+  booktitle = {KDD Workshop on Resource-Efficient Learning for Knowledge Discovery},
+  year      = {2026},
+  note      = {Oral Presentation}
+}
+
+@inproceedings{in2026personalize_ws,
+  abbr      = {KDD},
+  category  = {Workshop},
+  title     = {Personalize-then-Store: Benchmarking and Learning Personalized Memory for Long-horizon Agents},
+  author    = {In, Yeonjun and Kim, Wonjoong and Park, Sangwu and Yoon, Kanghoon and Park, Chanyoung},
+  booktitle = {KDD Workshop on Personal Intelligence in Agentic AI Era},
+  year      = {2026},
+  note      = {Best Paper Award}
+}
+
+@inproceedings{in2026failureattribution_ws,
+  abbr      = {ICML},
+  category  = {Workshop},
+  title     = {Rethinking Failure Attribution in Multi-Agent Systems: A Multi-Perspective Benchmark and Evaluation},
+  author    = {In, Yeonjun and Tanjim, Mehrab and Subramanian, Jayakumar and Kim, Sungchul and Bhattacharya, Uttaran and Kim, Wonjoong and Park, Sangwu and Sarkhel, Somdeb and Park, Chanyoung},
+  booktitle = {ICML Workshop on Failure Modes of Agentic AI},
+  year      = {2026},
+  note      = {Also presented at the KDD 2026 Workshop on Agentic Software Engineering (Oral)}
+}
+
+@inproceedings{park2026testtimetraining_ws,
+  abbr      = {ICML},
+  category  = {Workshop},
+  title     = {Test-Time Training for Visual Foresight Vision-Language-Action Models},
+  author    = {Park, Sangwu and Kim, Wonjoong and In, Yeonjun and Kim, Sein and Kang, Hongseok and Park, Chanyoung},
+  booktitle = {ICML Workshop on Continual Adaptation at Scale: Towards Sustainable AI},
+  year      = {2026}
+}
+
+@inproceedings{kim2026selfevolverec_ws,
+  abbr      = {ICLR},
+  category  = {Workshop},
+  title     = {Self-EvolveRec: Self-Evolving Recommender Systems with LLM-based Directional Feedback},
+  author    = {Kim, Sein and Park, Sangwu and Kang, Hongseok and Kim, Wonjoong and Seo, Jimin and In, Yeonjun and Yoon, Kanghoon and Park, Chanyoung},
+  booktitle = {ICLR Workshop on AI with Recursive Self-Improvement},
+  year      = {2026},
+  note      = {Also presented at the KDD 2026 Workshop on Agentic Software Engineering (Oral)}
+}
+
+@inproceedings{in2025safetystandard_ws,
+  abbr      = {NeurIPS},
+  category  = {Workshop},
+  title     = {Is Safety Standard Same for Everyone? User-Specific Safety Evaluation of Large Language Models},
+  author    = {In, Yeonjun and Kim, Wonjoong and Yoon, Kanghoon and Kim, Sungchul and Tanjim, Mehrab and Park, Sangwu and Kim, Kibum and Park, Chanyoung},
+  booktitle = {NeurIPS Workshop of Reliable ML from Unreliable Data},
+  year      = {2025}
 }
