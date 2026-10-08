@@ -1,37 +1,74 @@
 {% comment %}
-  Local copy of the al_folio_core news include. Only change: the date column shows
-  month and year (for example "Sep 2026") instead of month, day and year.
+  Local replacement for the al_folio_core news include: a timeline list instead of a table.
+  - The date shows month and year only (for example "Sep 2026").
+  - On the home page, `announcements.collapse_after` in _pages/about.md sets how many items
+    are visible before the "Show N more" button. Leave it blank to show everything.
+  Styles live in _sass/_custom.scss under "Home: news timeline".
 {% endcomment %}
 <div class="news">
   {% if site.news != blank %}
+    {% assign news = site.news | reverse %}
     {% assign news_size = site.news | size %}
-    <div
-      class="table-responsive"
-      {% if include.limit and page.announcements.scrollable and news_size > 3 %}
-        style="max-height: 60vw"
+    {% if include.limit and page.announcements.limit %}
+      {% assign news_limit = page.announcements.limit %}
+    {% else %}
+      {% assign news_limit = news_size %}
+    {% endif %}
+    {% if news_limit > news_size %}
+      {% assign news_limit = news_size %}
+    {% endif %}
+    {% assign collapse_after = 0 %}
+    {% if include.limit and page.announcements.collapse_after %}
+      {% if news_limit > page.announcements.collapse_after %}
+        {% assign collapse_after = page.announcements.collapse_after %}
       {% endif %}
-    >
-      <table class="table table-sm table-borderless">
-        {% assign news = site.news | reverse %}
-        {% if include.limit and page.announcements.limit %}
-          {% assign news_limit = page.announcements.limit %}
-        {% else %}
-          {% assign news_limit = news_size %}
-        {% endif %}
-        {% for item in news limit: news_limit %}
-          <tr>
-            <th scope="row" style="width: 20%">{{ item.date | date: '%b %Y' }}</th>
-            <td>
-              {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-              {% else %}
-                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-              {% endif %}
-            </td>
-          </tr>
-        {% endfor %}
-      </table>
-    </div>
+    {% endif %}
+    <ul class="news-timeline">
+      {% for item in news limit: news_limit %}
+        <li
+          class="news-item"
+          {% if collapse_after > 0 and forloop.index > collapse_after %}
+            hidden data-news-extra
+          {% endif %}
+        >
+          <span class="news-date">{{ item.date | date: '%b %Y' }}</span>
+          <span class="news-text">
+            {% if item.inline %}
+              {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+            {% else %}
+              <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+            {% endif %}
+          </span>
+        </li>
+      {% endfor %}
+    </ul>
+    {% if collapse_after > 0 %}
+      {% assign hidden_count = news_limit | minus: collapse_after %}
+      <button
+        type="button"
+        class="news-toggle"
+        aria-expanded="false"
+        data-label-more="Show {{ hidden_count }} more"
+        data-label-less="Show less"
+      >
+        Show {{ hidden_count }} more
+      </button>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelectorAll('.news-toggle').forEach(function (button) {
+            var extras = button.parentElement.querySelectorAll('[data-news-extra]');
+            button.addEventListener('click', function () {
+              var expand = button.getAttribute('aria-expanded') !== 'true';
+              extras.forEach(function (item) {
+                item.hidden = !expand;
+              });
+              button.setAttribute('aria-expanded', String(expand));
+              button.textContent = expand ? button.dataset.labelLess : button.dataset.labelMore;
+            });
+          });
+        });
+      </script>
+    {% endif %}
   {% else %}
     <p>No news so far...</p>
   {% endif %}

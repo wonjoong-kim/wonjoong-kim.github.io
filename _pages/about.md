@@ -17,6 +17,7 @@ announcements:
   enabled: true # includes a list of news items
   scrollable: false # adds a vertical scroll bar if there are more than 3 news items
   limit: # leave blank to include all the news in the `_news` folder
+  collapse_after: 5 # show this many items, then a "Show N more" button. Leave blank to show all
 
 latest_posts:
   enabled: false
@@ -24,8 +25,22 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a Ph.D. student in the [Graduate School of Data Science](https://gsds.kaist.ac.kr/) at [KAIST](https://www.kaist.ac.kr/en/), advised by [Prof. Chanyoung Park](https://dsail.kaist.ac.kr/professor/). Before that, I received an M.S. from the Graduate School of AI at KAIST, an M.S. in Industrial and Management Engineering from POSTECH, and a B.S. in Mathematics from Gachon University.
+I am a Ph.D. student in the [Graduate School of Data Science](https://gsds.kaist.ac.kr/) at [KAIST](https://www.kaist.ac.kr/en/), where I am fortunate to be advised by [Prof. Chanyoung Park](https://dsail.kaist.ac.kr/professor/).
 
-From April to September 2026, I was a research intern at Microsoft STCA in Beijing, where I worked on self-evolving agents with [Jue Zhang](https://www.microsoft.com/en-us/research/people/juezhang/).
+I do research with my awesome colleagues at [DSAIL](https://dsail.kaist.ac.kr) (Data Science and Artificial Intelligence Lab).
 
-My research interest is **Agentic AI**, including tool-use agents, multi-agentic systems, self-evolving agents, and harness optimization.
+---
+
+🔬 Core Research Focus
+
+**Self-Evolving LLM Agents**
+
+I work on **how LLM agents can be evaluated and improved from their own experience**, so that an agent becomes more reliable on long, multi-step tasks without a person hand-tuning it after every failure.
+
+`Keywords: Agentic AI, Tool-Use Agents, Multi-Agentic System, Self-Evolving Agents, Harness Optimization`
+
+**Key Focus:**
+
+- **Trajectory Evaluation**: Judging the whole reasoning trajectory of a tool-using agent, not only whether its final answer is correct.
+- **Multi-Turn Agent Optimization**: Step-level reward signals that tell an agent which intermediate steps helped, instead of a single outcome reward at the end.
+- **Harness Optimization**: Automatically improving the harness around the model (its prompts, tool configurations, and control logic) from the agent's execution traces.

@@ -1,0 +1,310 @@
+/*******************************************************************************
+ * Site-specific styles.
+ *
+ * assets/css/main.scss loads this file last, so every rule here overrides the
+ * al_folio_core theme. To change the look of the site, edit this file only.
+ ******************************************************************************/
+
+/* ---------- Colors ---------- */
+
+:root {
+  --global-bg-color: #f5f4f0; /* warm off-white page background */
+  --global-theme-color: #0b5394; /* links, dots, badges, section rules */
+  --global-hover-color: #0b5394;
+  --global-text-color-light: #828282; /* dates, author lists, notes */
+  --global-code-bg-color: rgba(11, 83, 148, 0.07); /* keyword chip background */
+}
+
+/* ---------- Base ---------- */
+
+body {
+  font-weight: 400;
+}
+
+/* The theme prints the home page section titles in lowercase ("news"). */
+.post > article > h2 > a {
+  text-transform: capitalize;
+}
+
+/* The current tab is marked by color only. */
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
+  font-weight: 400;
+}
+
+footer.sticky-bottom .container {
+  text-align: left;
+}
+
+/* ---------- Home: profile photo and intro ---------- */
+
+.profile img {
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+@media (min-width: 576px) {
+  .profile {
+    width: 22%; /* photo width as a share of the page width */
+    margin-top: -5.6rem; /* lifts the photo up beside the name */
+  }
+
+  .profile.float-right {
+    margin-left: 1.5rem;
+  }
+}
+
+/* Phones: a smaller photo above the intro instead of a full-width one. */
+@media (max-width: 575.98px) {
+  .profile.float-right {
+    float: none;
+    width: 42%;
+    margin: 0 0 1.2rem;
+  }
+}
+
+/* Keep the divider below the photo instead of running underneath it. */
+.post .clearfix hr {
+  clear: both;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Home: contact icons at the bottom ---------- */
+
+.social {
+  margin-top: 2.5rem;
+  text-align: left;
+
+  .contact-icons {
+    font-size: 1.6rem;
+
+    a {
+      margin-right: 0.8rem;
+    }
+  }
+}
+
+/* ---------- Home: news timeline ---------- */
+
+.news {
+  .news-timeline {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0.4rem 0 0.4rem 6.5rem;
+
+    /* the vertical line */
+    background-image: linear-gradient(var(--global-divider-color), var(--global-divider-color));
+    background-repeat: no-repeat;
+    background-position: 6.5rem 1.1rem;
+    background-size: 2px calc(100% - 2.2rem);
+  }
+
+  .news-item {
+    position: relative;
+    padding: 0.45rem 0 0.45rem 1.5rem;
+
+    /* the dot on the line */
+    &::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      top: 0.95rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--global-theme-color);
+      box-shadow: 0 0 0 3px var(--global-bg-color);
+    }
+  }
+
+  .news-date {
+    position: absolute;
+    left: -6.5rem;
+    top: 0.6rem;
+    width: 5.6rem;
+    text-align: right;
+    font-size: 0.82rem;
+    color: var(--global-text-color-light);
+    white-space: nowrap;
+  }
+
+  .news-text {
+    display: block;
+    line-height: 1.6;
+  }
+
+  .news-toggle {
+    display: block;
+    margin: -0.2rem 0 0 6.5rem;
+    padding: 0.2rem 0.9rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 20px;
+    background-color: transparent;
+    color: var(--global-text-color-light);
+    font-size: 0.82rem;
+    line-height: 1.6;
+    cursor: pointer;
+    transition:
+      color 0.2s ease,
+      border-color 0.2s ease;
+
+    &:hover {
+      color: var(--global-theme-color);
+      border-color: var(--global-theme-color);
+    }
+  }
+}
+
+/* Phones: the date moves above the text. */
+@media (max-width: 576px) {
+  .news .news-timeline {
+    padding-left: 1.5rem;
+    background-position: 0.7rem 1.1rem;
+  }
+
+  .news .news-toggle {
+    margin-left: 1.5rem;
+  }
+
+  .news .news-item {
+    padding-left: 1.5rem;
+
+    &::before {
+      left: -19px;
+      top: 0.75rem;
+    }
+  }
+
+  .news .news-date {
+    position: static;
+    display: block;
+    width: auto;
+    text-align: left;
+    margin-bottom: 0.1rem;
+  }
+}
+
+/* ---------- Publications ---------- */
+
+.publications {
+  margin-top: 1.5rem;
+
+  /* section shortcuts at the top of the page */
+  .pub-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+
+    a {
+      display: inline-block;
+      padding: 0.2rem 1rem;
+      border: 1px solid var(--global-theme-color);
+      border-radius: 20px;
+      color: var(--global-theme-color);
+      font-size: 0.9rem;
+      text-decoration: none;
+      white-space: nowrap;
+
+      &:hover {
+        background-color: var(--global-theme-color);
+        color: #ffffff;
+        text-decoration: none;
+      }
+    }
+  }
+
+  h2.category-header {
+    margin-top: 3rem;
+    margin-bottom: 1.4rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--global-theme-color);
+    color: var(--global-text-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+
+  ol.bibliography li {
+    margin-bottom: 1.6rem;
+
+    /* venue tag: outlined instead of a filled bar */
+    .abbr {
+      margin-bottom: 0.4rem;
+
+      abbr.badge {
+        display: inline-block;
+        max-width: fit-content; /* the theme sets width: 100%, so this is what keeps the tag compact */
+        margin-bottom: 0;
+        padding: 0.2rem 0.6rem;
+        border: 1.5px solid var(--global-theme-color);
+        border-radius: 4px;
+        background-color: transparent;
+        color: var(--global-theme-color) !important;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        line-height: 1.25;
+        text-decoration: none;
+        text-transform: uppercase;
+        white-space: normal;
+        overflow-wrap: break-word;
+      }
+    }
+
+    .title {
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .author {
+      margin-top: 0.25rem;
+      font-size: 0.875rem;
+      color: var(--global-text-color-light);
+
+      /* your own name */
+      > em {
+        border-bottom: 1px solid var(--global-text-color);
+        color: var(--global-text-color);
+        font-style: normal;
+        font-weight: 500;
+      }
+    }
+
+    /* venue line: italic venue, year in the theme color */
+    .periodical {
+      margin-top: 0.2rem;
+      font-size: 0.82rem;
+      color: var(--global-theme-color);
+
+      em {
+        color: var(--global-text-color);
+      }
+    }
+
+    /* note line ("Under Review", "Also presented at ...") */
+    .periodical + .periodical {
+      color: var(--global-text-color-light);
+    }
+
+    .pubaward {
+      color: var(--global-highlight-color);
+    }
+
+    .links a.btn {
+      margin: 0.5rem 0.4rem 0 0;
+      padding: 0.2rem 0.9rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* Let each entry use the full page width (the theme leaves the last sixth empty). */
+@media (min-width: 576px) {
+  .publications ol.bibliography li .row > .col-sm-8 {
+    flex: 0 0 83.3333%;
+    max-width: 83.3333%;
+  }
+}

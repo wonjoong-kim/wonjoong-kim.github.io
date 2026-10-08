@@ -13,20 +13,27 @@ nav_order: 1
 
 <div class="publications">
 
-<h2 id="preprints">Preprints</h2>
+<div class="pub-nav">
+  <a href="#preprints">Preprints</a>
+  <a href="#conferences">Conferences</a>
+  <a href="#journals">Journals</a>
+  <a href="#workshops">Workshops</a>
+</div>
+
+<h2 class="category-header" id="preprints">Preprints</h2>
 
 {% bibliography --group_by none --query @unpublished %}
 
-<h2 id="conferences">Conferences</h2>
+<h2 class="category-header" id="conferences">Conferences</h2>
 
-{% bibliography --query @inproceedings[category=Conference] %}
+{% bibliography --group_by none --query @inproceedings[category=Conference] %}
 
-<h2 id="journals">Journals</h2>
+<h2 class="category-header" id="journals">Journals</h2>
 
-{% bibliography --query @article %}
+{% bibliography --group_by none --query @article %}
 
-<h2 id="workshops">Workshops</h2>
+<h2 class="category-header" id="workshops">Workshops</h2>
 
-{% bibliography --query @inproceedings[category=Workshop] %}
+{% bibliography --group_by none --query @inproceedings[category=Workshop] %}
 
 </div>
