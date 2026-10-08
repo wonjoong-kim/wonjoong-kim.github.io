@@ -310,7 +310,8 @@ footer.sticky-bottom .container {
 }
 
 /* Show "Paper" on the arXiv button. Only the label changes, the link stays the same. */
-.publications ol.bibliography li .links a.btn[href*="arxiv"] {
+.publications ol.bibliography li .links a.btn[href*="arxiv"],
+.publications ol.bibliography li .links a.btn[href*="doi"] {
   font-size: 0; /* hides the original "arXiv" label */
 
   &::after {
